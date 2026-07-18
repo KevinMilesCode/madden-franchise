@@ -25,6 +25,8 @@ declare class FranchiseFileTable3Field {
     index: number;
     _offset: number;
     _parent: import("./FranchiseFileTable").default;
+    /** @private */
+    private _strategyContext;
     set unformattedValue(value: any);
     get unformattedValue(): any;
     set value(value: string);
@@ -35,6 +37,8 @@ declare class FranchiseFileTable3Field {
     /** @type {Table3FieldStrategy} */
     get strategy(): import("./strategies/StrategyPicker").Table3FieldStrategy;
     _strategy: import("./strategies/StrategyPicker").Table3FieldStrategy | undefined;
+    set strategyContext(strategyContext: {});
+    get strategyContext(): {};
     /** @param {number} offset */
     set offset(offset: number);
     /** @returns {number} */

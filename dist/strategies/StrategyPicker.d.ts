@@ -23,9 +23,9 @@ export type Table2FieldStrategy = {
     setUnformattedValueFromFormatted: (arg0: any, arg1: any) => any;
 };
 export type Table3FieldStrategy = {
-    getInitialUnformattedValue: (arg0: any, arg1: any) => any;
-    getFormattedValueFromUnformatted: (arg0: any) => any;
-    setUnformattedValueFromFormatted: (arg0: any, arg1: any, arg2: any) => any;
+    getInitialUnformattedValue: (arg0: any, arg1: any, arg2: any, arg3: any) => any;
+    getFormattedValueFromUnformatted: (arg0: any, arg1: any) => any;
+    setUnformattedValueFromFormatted: (arg0: any, arg1: any, arg2: any, arg3: any) => any;
 };
 export type GameStrategy = {
     name: string;

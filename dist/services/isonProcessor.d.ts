@@ -15,20 +15,26 @@ export class IsonProcessor {
     static ISON_DOUBLE: number;
     static ISON_BYTE: number;
     static ISON_END: number;
-    constructor(gameYear?: number);
+    static DEFAULT_LOOKUP_NAME: string;
+    static CGA_LOOKUP_NAME: string;
+    static CGA_TABLE_NAME: string;
+    constructor(gameYear?: number, gameType?: string, tableName?: string);
     gameYear: number;
+    gameType: string;
+    tableName: string;
     stringLookup: any;
     reverseStringLookup: {};
     fileData: any;
     isonOffset: number;
+    cacheKey: string;
     /**
      * Lazy load the interned string lookup for the specified game year
      */
-    loadGameYearData(): void;
+    loadGameData(): void;
     /**
      * Static helper method for loading game year data (used for fallback)
      */
-    loadGameYearDataStatic(gameYear: any): any;
+    loadGameYearDataStatic(gameYear: any, gameType?: string): any;
     /**
      * Create a reverse lookup for JSON -> ISON conversion
      */

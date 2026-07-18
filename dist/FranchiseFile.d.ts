@@ -4,6 +4,7 @@ export type FileType = {
     format: string;
     year: number;
     compressed: boolean;
+    gameType: string;
 };
 export type SchemaMetadata = {
     gameYear: string | null;
@@ -68,6 +69,8 @@ declare class FranchiseFile extends events {
     private _type;
     /** @private @type {number} */
     private _gameYear;
+    /** @private @type {string} */
+    private _gameType;
     /** @private @type {SchemaMetadata} */
     private _expectedSchemaVersion;
     /** @type {Buffer} */
@@ -131,6 +134,10 @@ declare class FranchiseFile extends events {
      * @returns {number}
      */
     get gameYear(): number;
+    /**
+     * @returns {string}
+     */
+    get gameType(): string;
     /**
      * @returns {FileType}
      */
