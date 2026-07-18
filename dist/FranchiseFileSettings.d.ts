@@ -6,6 +6,7 @@ export type SettingsParam = {
     schemaDirectory?: string | null | undefined;
     autoParse?: boolean | null | undefined;
     autoUnempty?: boolean | null | undefined;
+    gameTypeOverride?: string | null | undefined;
 };
 /**
  * @typedef {import('./FranchiseFile').SchemaMetadata} SchemaMetadata
@@ -17,6 +18,7 @@ export type SettingsParam = {
  * @property {string?} [schemaDirectory]
  * @property {boolean?} [autoParse]
  * @property {boolean?} [autoUnempty]
+ * @property {string?} [gameTypeOverride]
  */
 declare class FranchiseFileSettings {
     /** @param {SettingsParam} settings */
@@ -39,5 +41,7 @@ declare class FranchiseFileSettings {
     autoUnempty: boolean;
     /** @type {number} */
     gameYearOverride: number;
+    /** @type {string} */
+    gameTypeOverride: string;
 }
 //# sourceMappingURL=FranchiseFileSettings.d.ts.map

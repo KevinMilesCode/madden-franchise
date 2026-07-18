@@ -146,7 +146,7 @@ export type TableStrategy = import('./strategies/StrategyPicker.js').TableStrate
  * @typedef {import('./strategies/StrategyPicker.js').TableStrategy} TableStrategy
  */
 declare class FranchiseFileTable extends events {
-    constructor(data: any, offset: any, gameYear: any, strategy: any, settings: any);
+    constructor(data: any, offset: any, gameYear: any, strategy: any, settings: any, gameType: any);
     index: number;
     /** @type {Buffer} */
     data: Buffer;
@@ -161,6 +161,8 @@ declare class FranchiseFileTable extends events {
     recordsRead: boolean;
     /** @type {number} */
     _gameYear: number;
+    /** @type {string} */
+    _gameType: string;
     /** @type {FranchiseFileTableHeader} */
     header: FranchiseFileTableHeader;
     /** @type {string} */
